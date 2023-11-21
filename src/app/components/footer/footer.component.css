@@ -1,0 +1,21 @@
+footer{
+    color: white;
+    background-color: var(--footerColor);
+}
+
+footer p{
+    font-family: var(--poppins);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer .footerHead{
+ font-family: 'avenir',sans-serif;
+ font-weight: 700;
+ font-size: 18px;
+}
+
+.copy{
+    font-family: var(--inter);
+    font-weight: 300;
+}

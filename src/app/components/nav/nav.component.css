@@ -1,0 +1,47 @@
+img{
+    max-width: 120px;
+    height: 60px;
+    cursor: pointer;
+}
+
+nav{
+    background-color:var(--primaryColor) ;
+    font-family: var(--jak);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+nav button:hover{
+    color: var(--primaryColor);
+}
+
+
+a {
+    position: relative;
+    text-decoration: none;
+  }
+
+a:hover{
+    color: white;
+}  
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
