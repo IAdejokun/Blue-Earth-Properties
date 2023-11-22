@@ -1,0 +1,9 @@
+h3,p{
+    color: var(--txtColor);
+}
+
+h3{
+    font-size: 36px;
+    font-family: var(--inter);
+    font-weight: 600;
+}
