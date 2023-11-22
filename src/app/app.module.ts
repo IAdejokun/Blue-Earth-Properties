@@ -18,6 +18,7 @@ import {register} from 'swiper/element/bundle';
 import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component';
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
 import { MeetBrokerComponent } from './pages/about/meet-broker/meet-broker.component';
+import { InvestComponent } from './pages/invest/invest.component';
 
 register()
 @NgModule({
@@ -34,7 +35,8 @@ register()
     PageNotFoundComponent,
     WhoWeAreComponent,
     VisionMissionComponent,
-    MeetBrokerComponent
+    MeetBrokerComponent,
+    InvestComponent
   ],
   imports: [
     BrowserModule,
