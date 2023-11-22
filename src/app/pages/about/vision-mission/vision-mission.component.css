@@ -1,0 +1,13 @@
+h3{
+    font-family: 'avenir',sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: var(--headingColor);
+}
+
+p{
+    color: var(--txtColor);
+    font-family: var(--poppins);
+    font-weight: 300;
+    font-size:15px;
+}

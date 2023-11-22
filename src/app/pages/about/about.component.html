@@ -1,1 +1,24 @@
-<p>about works!</p>
+
+<app-nav></app-nav>
+
+
+<div class="w-[85%] mx-auto gap-12 flex flex-col md:flex-row h-[85vh]">
+
+<nav class="flex flex-col self-center shadow-md">
+
+    <a routerLink='who-we-are' routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Who We Are</a>
+    <a routerLink='vision-mission' routerLinkActive="active">Our Vision, Mission and Core Values</a>
+    <a routerLink='meet-broker' routerLinkActive="active">Meet The Senior Broker</a>
+    <a routerLink='team' routerLinkActive="active">Meet Our Associate Team</a>
+
+</nav>
+
+<div class="w-[60%]">
+    <router-outlet></router-outlet>
+</div>
+
+</div>
+
+<div class="mt-12">
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,16 @@
+h2{
+    font-family: 'avenir',sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: var(--headingColor);
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+p{
+    color: #3F3D56;
+    font-family: var(--poppins);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+}
