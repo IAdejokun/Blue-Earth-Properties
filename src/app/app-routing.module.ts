@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
 import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component';
 import { InvestComponent } from './pages/invest/invest.component';
+import { SinglePostComponent } from './pages/single-post/single-post.component';
 
 
 const routes: Routes = [
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path:'invest',
     component:InvestComponent
+  },
+  {
+    path:'post',
+    component:SinglePostComponent
   },
   {
     path:'**',
