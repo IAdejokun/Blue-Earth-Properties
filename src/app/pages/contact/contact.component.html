@@ -1,1 +1,242 @@
-<p>contact works!</p>
+<app-nav></app-nav>
+
+<section class="relative">
+    <div class="imageWrapper h-64 relative">
+        <img class="object-cover w-full h-full" src="assets/contactUsImg.png" alt="contactUsImg">
+        <div class="overlay absolute inset-0 flex items-center p-8">
+            <h3 class="ms-14 text-6xl font-bold text-white">Contact Us</h3>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="flex">
+        <div class="grid grid-cols-3">
+
+            <div class="">
+
+            </div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <form class="shadow-xl" [formGroup]="contactFormData" (ngSubmit)="contactFormSubmit()">
+
+        <div class="p-10">
+            <p class="py-3"><span class="text-red-600">*</span> Means Required</p>
+    
+            <div class="grid  grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+    
+            <div>
+            <label for="firstName"><span class="text-red-600">*</span> First name</label>
+            <input type="text" id="firstName" placeholder="First Name" formControlName="firstName" class="block w-full rounded py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+            
+                <div *ngIf="
+                contactFormData.get('firstName')?.invalid &&
+                contactFormData.get('firstName')?.touched
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    First Name is required!
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                    contactFormData.get('firstName')?.errors?.['minlength']
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    First Name is too short (Minimum Length of 3 Characters).
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                contactFormData.get('firstName')?.valid
+                ">
+    
+                <div class="mt-2 text-green-600 text-sm">
+                    <!-- Add your validation message here -->
+                    ✅ Look's Good.
+                  </div>
+    
+                </div>
+    
+            </div>
+    
+        <div>
+            <label for="lastName"><span class="text-red-600">*</span>Last name</label>
+            <input type="text" required id="lastName" placeholder="Last Name" formControlName="lastName" class="block w-full rounded py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        
+            <div *ngIf="
+                contactFormData.get('lastName')?.invalid &&
+                contactFormData.get('lastName')?.touched
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    Last Name is required!
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                    contactFormData.get('lastName')?.errors?.['minlength']
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    Last Name is too short (Minimum Length of 3 Characters).
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                contactFormData.get('lastName')?.valid
+                ">
+                
+                <div class="mt-2 text-green-600 text-sm">
+                    <!-- Add your validation message here -->
+                    ✅ Look's Good.
+                  </div>
+    
+                </div>
+        
+        </div>
+    
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+    
+        <div>
+            <label for="email"><span class="text-red-600">*</span>Email Address</label>
+            <input type="email" required id="email" autocomplete="email" placeholder="your Email" formControlName="email" class="block w-full rounded py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">   
+        
+            <div *ngIf="
+                contactFormData.get('email')?.invalid &&
+                contactFormData.get('email')?.touched
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    Email is Invalid!
+                  </div>
+    
+                </div>
+    
+    
+                <div *ngIf="
+                contactFormData.get('email')?.valid
+                ">
+                
+                <div class="mt-2 text-green-600 text-sm">
+                    <!-- Add your validation message here -->
+                    ✅ Look's Good.
+                  </div>
+    
+                </div>
+    
+    
+        </div>
+    
+        <div>
+            <label for="subject"><span class="text-red-600">*</span>Subject</label>
+            <input type="text" id="subject" placeholder="Subject?" formControlName="subject" class="block w-full rounded py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          
+            <div *ngIf="
+            contactFormData.get('subject')?.invalid &&
+            contactFormData.get('subject')?.touched
+            ">
+    
+            <div class="mt-2 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                Subject is required!
+              </div>
+    
+            </div>
+    
+            <div *ngIf="
+                contactFormData.get('subject')?.errors?.['minlength']
+            ">
+    
+            <div class="mt-2 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                Subject is too short (Minimum Length of 3 Characters).
+              </div>
+    
+            </div>
+    
+            <div *ngIf="
+            contactFormData.get('subject')?.valid
+            ">
+            
+            <div class="mt-2 text-green-600 text-sm">
+                <!-- Add your validation message here -->
+                ✅ Look's Good.
+              </div>
+    
+            </div>
+    
+    
+          </div>
+    
+        </div>
+    
+        <div class="mb-5">
+            <label for="Message"><span class="text-red-600">*</span>Message</label>
+            <textarea id="Message" required rows="4" cols="50" formControlName="message" placeholder="Type Your Message Here" class="block w-full rounded py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+        
+            <div *ngIf="
+                contactFormData.get('message')?.invalid &&
+                contactFormData.get('message')?.touched
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    Message is required!
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                    contactFormData.get('message')?.errors?.['minlength']
+                ">
+    
+                <div class="mt-2 text-red-600 text-sm">
+                    <!-- Add your validation message here -->
+                    Message is too short (Minimum Length of 3 Characters).
+                  </div>
+    
+                </div>
+    
+                <div *ngIf="
+                contactFormData.get('message')?.valid
+                ">
+                
+                <div class="mt-2 text-green-600 text-sm">
+                    <!-- Add your validation message here -->
+                    ✅ Look's Good.
+                  </div>
+    
+                </div>
+    
+    
+        </div>
+    
+        <button [disabled]="!contactFormData.valid" [class.bg-gray-400]="!contactFormData.valid" [class.#8533C6]="contactFormData.valid" class="rounded text-white bg-[#0072C6] hover:transition-all  hover:bg-green-700 p-2" type="submit" value="submit">Send Message</button>
+       </div>
+    
+    </form>
+    
+    </section>

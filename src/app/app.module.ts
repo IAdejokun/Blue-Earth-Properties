@@ -19,6 +19,9 @@ import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
 import { MeetBrokerComponent } from './pages/about/meet-broker/meet-broker.component';
 import { InvestComponent } from './pages/invest/invest.component';
+import {ToastrModule} from  'ngx-toastr';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SinglePostComponent } from './pages/single-post/single-post.component'
 
 register()
 @NgModule({
@@ -36,13 +39,16 @@ register()
     WhoWeAreComponent,
     VisionMissionComponent,
     MeetBrokerComponent,
-    InvestComponent
+    InvestComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
+    ToastrModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

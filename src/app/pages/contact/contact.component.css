@@ -1,0 +1,21 @@
+/* .imageWrapper{
+    position: relative;
+    width: 100vw;
+}
+
+.overlay{
+    position: absolute; 
+    background: rgba(57, 57, 57, 0.5);
+}
+
+.overlay > h3{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.overlay_2 {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  } */
