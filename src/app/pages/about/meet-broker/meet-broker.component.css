@@ -7,7 +7,7 @@ h3{
 
 p{
     line-height: 30px;
-    font-size: 15px;
+    font-size: 12px;
     font-family: var(--poppins);
     font-weight: 300;
 }
@@ -15,3 +15,23 @@ p{
 span{
     font-weight: 600;
 }
+
+@media screen and (max-width : 1023px) {
+    h3 {
+        font-size: 35px;
+       }
+   
+       p{
+           font-size:10px;
+       }
+  }
+
+  @media screen and (max-width : 390px) {
+    h3 {
+     font-size: 20px;
+    }
+
+    p{
+        font-size:10px;
+    }
+  } 

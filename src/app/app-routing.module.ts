@@ -10,7 +10,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
 import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component';
 import { InvestComponent } from './pages/invest/invest.component';
-import { SinglePostComponent } from './pages/single-post/single-post.component';
+import {BlogComponent} from './pages/blog/blog.component'
+
+import { ListingsComponent } from './pages/listings/listings.component';
+import { HouseOneComponent } from './pages/property/house-one/house-one.component';
+import { SamplePostComponent } from './pages/blogPost/sample-post/sample-post.component';
+
 
 
 const routes: Routes = [
@@ -63,8 +68,20 @@ const routes: Routes = [
     component:InvestComponent
   },
   {
-    path:'post',
-    component:SinglePostComponent
+    path:'blog',
+    component:BlogComponent,
+  },
+  {
+    path:'listings',
+    component:ListingsComponent,
+  },
+  {
+    path:'listings/houseOne',
+    component:HouseOneComponent
+  },
+  {
+    path:'blog/post',
+    component:SamplePostComponent
   },
   {
     path:'**',

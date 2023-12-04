@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+
+<section class="w-[95%] mx-auto">
+
+    <div class="flex justify-center py-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+
+            <div class="mx-auto">
+                <!-- <img src="{{}}" alt="{{}}"> -->
+                
+                <div *ngIf="selectedImg" class="mt-12 mb-4 w-[29rem] h-[21rem] transition-all">
+                    <img [src]="selectedImg" [alt]="selectedAlt" class="rounded w-full h-full object-cover">
+                </div>
+                
+
+                <div class="flex mr-9">
+                <div *ngFor="let img of imgData" class="mx-2 my-3">
+                    <button class="w-20 h-20 transition-transform transform hover:scale-105">
+                      <img [src]="img.imgSrc" [alt]="img.imgAlt" [class.active]="selectedImg === img.imgSrc" (click)="selectImg(img.imgSrc, img.imgAlt)" class="rounded-lg w-full h-full object-cover transition-opacity opacity-100 hover:opacity-75">
+                    </button>
+                  </div>
+                </div>
+            </div>
+
+            <div class="mt-10 w-[90%] mx-auto">
+                <h3 class="font-['poppins'] text-[#0F2B8E] text-4xl font-semibold">5 Bedroom Detached Duplex with Swimming Pool</h3>
+                <p class="font-['poppins'] my-2"><span class="font-semibold">location:</span> Lagos, Nigeria</p>
+                <p class="font-['poppins'] my-2"><span class="font-semibold"> Price: &#8358;</span> 100,000,000</p>
+                <p class="font-['poppins'] my-2"><span class="font-semibold"> Property Attributes: </span> 9Beds | 18Baths | Single Family Home </p>
+                <p class="font-['poppins'] my-2 font-semibold">Property Description</p>
+                <p class="font-['poppins'] my-2 description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim 
+                    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia 
+                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque 
+                    porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+                <button class="book rounded my-2 text-white bg-[#0072C6] p-2">Book Tour</button>
+                </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="w-[85%] border my-5 border-[#0073c644] h-[0.01rem] mx-auto">
+
+</div>
+<div class="w-[87%] mx-auto">
+<p class="font-['poppins'] mb-8 font-semibold ms-2 text-4xl media">Media</p>
+
+<div class="flex justify-center lg:justify-start mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    
+    <div *ngFor="let media of moreMedia" class="mx-1 my-3">
+      
+        <!-- Use ngIf to conditionally render img or video based on the media type -->
+        <ng-container *ngIf="media.type === 'image'; else videoTemplate">
+          <img [src]="media.src" [alt]="media.alt" class="rounded-lg w-[20rem] h-80 transition-transform transform hover:scale-105 ">
+        </ng-container>
+        <ng-template #videoTemplate>
+
+          <video [src]="media.src" controls="controls" class="rounded-lg  w-[20rem] h-80 object-cover transition-transform transform hover:scale-105"></video>
+        
+        </ng-template>
+    
+    
+</div>
+  </div>
+</div>
+ 
+</div>
+<app-footer></app-footer>

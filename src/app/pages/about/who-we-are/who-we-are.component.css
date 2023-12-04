@@ -14,3 +14,23 @@ p{
     font-weight: 300;
     line-height: 30px;
 }
+
+@media screen and (max-width : 1023px) {
+    h2 {
+     font-size: 45px;
+    }
+
+    p{
+        font-size:12px;
+    }
+  }
+
+  @media screen and (max-width : 390px) {
+    h2 {
+     font-size: 30px;
+    }
+
+    p{
+        font-size:10px;
+    }
+  } 

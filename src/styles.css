@@ -2,7 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import 'swiper/swiper-bundle.css';
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root{
     --primaryColor:#0072C6;
@@ -13,6 +20,7 @@
     --txtColor: #3F3D56;
     --headingColor:#0F2B8E;
     --inter:'Inter', sans-serif;
+    --open:'Open Sans', sans-serif;
 }
 
 @font-face {
@@ -31,4 +39,9 @@
     font-family: 'avenir';
     src: url(assets/avenir_ff/AvenirLTStd-Roman.otf) format('opentype');
     font-weight: 400;
+}
+
+body {
+   
+    margin: 0 auto;
 }

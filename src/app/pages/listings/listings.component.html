@@ -1,0 +1,74 @@
+<app-nav></app-nav>
+
+<section class="w-[87%] mx-auto">
+
+<h2 class="font-['poppins'] font-semibold text-[#0072C6] text-5xl mt-10">Listings</h2>   
+
+ <!-- location nav -->
+<nav class="mt-8">
+    <div class="space-x-2 mb-10">
+   <button [ngClass]="{'active': selectedLocation === 'All'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('All')">All</button>
+   <button [ngClass]="{'active': selectedLocation === 'lagos'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('lagos')">Lagos </button> 
+   <button [ngClass]="{'active': selectedLocation === 'abuja'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('abuja')">Abuja</button> 
+   <button [ngClass]="{'active': selectedLocation === 'ibadan'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('ibadan')">Ibadan</button> 
+   <button [ngClass]="{'active': selectedLocation === 'enugu'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('enugu')">Enugu</button> 
+   <button [ngClass]="{'active': selectedLocation === 'osun'}" class="rounded-2xl delay-75 transition-all text-[#17BFE6] px-4 py-2 hover:bg-[#0072C6] hover:text-white border-gray-200 border" (click)="filterListing('osun')">Osun</button>  
+    </div>
+</nav>
+
+</section>
+
+<!-- card listing section  -->
+
+<section class="w-[87%] mx-auto">
+
+   
+
+        <div *ngIf="filteredListings.length > 0; else notAvailable" class="mb-5 flex justify-center lg:justify-start">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+            <div *ngFor="let list of filteredListings">
+    
+<div class="card transition-transform transform hover:scale-105 min-w-[290px] max-w-lg" routerLink="{{list.route}}">
+
+        <div class="max-w-xs bg-white border-gray-200 rounded-lg shadow-lg">
+            <a routerLink="{{list.route}}">
+                <img class="rounded-t-lg w-full h-52 object-cover" src="{{list.propertyImg}}" alt=""/>
+            </a>
+            <div class="pt-3 ps-5 pb-4 h-full">
+                <a routerLink="{{list.route}}">
+                    <h5 class="text-[1.3rem] ps-1 font-bold tracking-tight text-[#0F2B8E]">{{list.title}}</h5>
+                </a>
+                
+                <div class="flex items-center location">
+                    <span class="material-symbols-outlined text-[#374370] text-xl">
+                        location_on
+                        </span>   
+                     <p class="text-[#3F3D56]">{{list.location | titlecase }}</p>
+                </div>
+
+                <p class="ps-1 font-semibold text-[#3CCF8E]"> <span>&#8358;</span> {{list.price | number}}</p>
+
+                <p class="ps-1 pr-5 font-['poppins'] text-[#0F2B8E]" *ngIf="list.descriptionThree ; else descriptionTwo" > {{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionThree}}</p>
+                
+                <ng-template #descriptionTwo>
+                  <p class="ps-1 font-['poppins'] text-[#0F2B8E]">{{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} </p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+</div>
+
+<ng-template #notAvailable>
+    <section class="flex justify-center items-center h-[60vh]">
+    <p class="font-['poppins'] text-3xl font-bold text-[#0072C6]">This Location is Not Available</p>
+    </section>
+</ng-template>
+
+</section>
+
+
+<app-footer></app-footer>

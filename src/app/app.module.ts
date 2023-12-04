@@ -13,7 +13,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { TeamComponent } from './pages/about/team/team.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatMenuModule} from '@angular/material/menu';
 import {register} from 'swiper/element/bundle';
 import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component';
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
@@ -21,7 +20,13 @@ import { MeetBrokerComponent } from './pages/about/meet-broker/meet-broker.compo
 import { InvestComponent } from './pages/invest/invest.component';
 import {ToastrModule} from  'ngx-toastr';
 import {ReactiveFormsModule} from '@angular/forms';
-import { SinglePostComponent } from './pages/single-post/single-post.component'
+import { BlogComponent } from './pages/blog/blog.component';
+import { ListingsComponent } from './pages/listings/listings.component';
+import { HouseOneComponent } from './pages/property/house-one/house-one.component';
+import { SamplePostComponent } from './pages/blogPost/sample-post/sample-post.component';
+import {HttpClientModule} from '@angular/common/http';
+import {SidebarjsModule} from 'ng-sidebarjs'
+
 
 register()
 @NgModule({
@@ -40,15 +45,20 @@ register()
     VisionMissionComponent,
     MeetBrokerComponent,
     InvestComponent,
-    SinglePostComponent
+    BlogComponent,
+    ListingsComponent,
+    HouseOneComponent,
+    SamplePostComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatMenuModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    SidebarjsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,19 @@
+.active{
+    border: 3px solid var(--primaryColor);
+}
+
+p{
+    color: #3F3D56;
+}
+
+.description{
+    font-size: 15px;
+}
+
+.book{
+    font-family: var(--open);
+}
+
+.media{
+    color: #0F2B8E ;
+}
