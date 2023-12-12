@@ -1,0 +1,37 @@
+<swiper-container class="swiper w-[80%] h-[70vh] mx-auto" autoplay="true" [slidesPerView]="slidesPerView" speed="500" pagination-clickable="true" css-mode="true" pagination="true" space-between="10">
+   
+    
+    <swiper-slide *ngFor="let list of featured" class="mt-20 w-[80%]">
+        <div class="card transition-transform transform hover:scale-105 min-w-[290px] max-w-lg" routerLink="{{list.route}}">
+
+            <div class="max-w-xs bg-white border-gray-200 rounded-lg shadow-lg">
+                <a routerLink="{{list.route}}">
+                    <img class="rounded-t-lg w-full h-52 object-cover" src="{{list.propertyImg}}" alt=""/>
+                </a>
+                <div class="pt-3 ps-5 pb-4 h-full">
+                    <a routerLink="{{list.route}}">
+                        <h5 class="text-[1.3rem] ps-1 font-bold tracking-tight text-[#0F2B8E]">{{list.title}}</h5>
+                    </a>
+                    
+                    <div class="flex items-center location">
+                        <span class="material-symbols-outlined text-[#374370] text-xl">
+                            location_on
+                            </span>   
+                         <p class="text-[#3F3D56]">{{list.location | titlecase }}</p>
+                    </div>
+    
+                    <p class="ps-1 font-semibold text-[#3CCF8E]"> <span>&#8358;</span> {{list.price | number}}</p>
+    
+                    <p class="ps-1 pr-5 font-['poppins'] text-[#0F2B8E]" *ngIf="list.descriptionThree ; else descriptionTwo" > {{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionThree}}</p>
+    
+                    <ng-template #descriptionTwo>
+                      <p class="ps-1 font-['poppins'] text-[#0F2B8E]">{{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} </p>
+                    </ng-template>
+                </div>
+            </div>
+            
+        </div>
+    </swiper-slide>
+
+    
+  </swiper-container>
