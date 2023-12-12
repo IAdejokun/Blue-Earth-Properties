@@ -82,3 +82,7 @@ section div>h4{
     font-family: 'avenir',sans-serif;
     color: #374370;
 }
+
+.modalHeader{
+    font-family: var(--poppins);
+}

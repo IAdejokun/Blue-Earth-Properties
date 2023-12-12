@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import {PropertyModel} from 'src/app/property-model'
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,39 @@ export class HomeComponent {
   onScroll(): void{
     this.isScrolled = window.scrollY > 50
   }
+
+  //lising properties
+  homeListings: PropertyModel[] = [
+    {
+    title:'3 Bedroom Terrace',
+    location : 'Ikeja, Lagos',
+    price : 100000000,
+    route : '/listings/houseOne',
+    propertyImg : 'assets/house.jpeg',
+    descriptionOne: 'One Bedroom',
+    descriptionTwo: 'Two Toilet'
+  },
+  {
+    title:'4 Bedroom Duplex',
+    location : 'Garki, Abuja',
+    price : 1000000,
+    route : '/listings/houseOne',
+    propertyImg : 'assets/house2.png',
+    descriptionOne: 'One Bedroom',
+    descriptionTwo: 'Two Toilet',
+    descriptionThree:'Pool'
+  },
+  {
+    title:'4 Bedroom Terrace Duplex',
+    location : 'Oshogbo, Osun',
+    price : 20000000,
+    route : '/listings/houseOne',
+    propertyImg : 'assets/house1.jpeg',
+    descriptionOne: 'One Bedroom',
+    descriptionTwo: 'Two Toilet'
+  }
+
+]
 
  
 }

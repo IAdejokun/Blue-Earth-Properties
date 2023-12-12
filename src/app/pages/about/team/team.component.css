@@ -1,0 +1,21 @@
+img{
+    width:250px;
+    height: 250px;
+}
+
+h3{
+    font-family: 'avenir',sans-serif;
+}
+
+p{
+    color: #3F3D56;
+}
+
+@media screen and (max-width : 1000px) {
+
+    img {
+     width: 150px;
+     height: 150px;
+    }
+
+  } 

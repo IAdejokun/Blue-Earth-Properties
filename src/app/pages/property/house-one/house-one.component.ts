@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import {ImgObject} from 'src/app/img-object' 
 import { MediaItem } from 'src/app/media-item';
+import {ToastrService} from 'ngx-toastr';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { nigeriaPhoneNumberValidator } from 'src/app/nigerianPhoneNumberValidator';
+import emailjs from '@emailjs/browser'
 
 @Component({
   selector: 'app-house-one',
@@ -11,6 +15,9 @@ import { MediaItem } from 'src/app/media-item';
 
 export class HouseOneComponent {
 
+constructor(private toast:ToastrService){}
+
+  listingTitle: string  = '5 Bedroom Detached Duplex with Swimming Pool';
   
 
   imgData : ImgObject[] = [
@@ -54,6 +61,70 @@ export class HouseOneComponent {
       type:'image'
      }
    ]
+
+   //Modal Selection
+   showModal = false;
+  
+   toggleModal(){
+     this.showModal = !this.showModal;
+   }
+
+
+
+   //form data
+
+   buyPropertyFormData = new FormGroup({
+    firstName: new FormControl('',[
+      Validators.required,
+      Validators.minLength(3)
+    ]),
+    
+    lastName: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3)
+    ]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$')
+    ]),
+    phoneNumber: new FormControl('', [
+      Validators.required,
+      nigeriaPhoneNumberValidator()
+    ]),
+
+    propertyOption: new FormControl(this.listingTitle),
+
+    to_name: new FormControl('Blue Earth Admin')
+})
+
+
+ async buyPropertyFormDataSubmit(){
+   
+    try{
+
+      emailjs.init('HiNBI5ByqicBTivny')
+
+
+      let response = await emailjs.send("service_y2iss3v","template_lvhzh0n",{
+        lastName: this.buyPropertyFormData.value.lastName ,
+        firstName: this.buyPropertyFormData.value.firstName,
+        to_name: this.buyPropertyFormData.value.to_name,
+        propertyOption: this.buyPropertyFormData.value.propertyOption,
+        email: this.buyPropertyFormData.value.email,
+        phoneNumber: this.buyPropertyFormData.value.phoneNumber,
+        });
+
+        this.toast.success("Email Sent Successfully, Check Mail", 'Success')
+        
+        this.buyPropertyFormData.reset()
+
+    }
+
+  catch(err){
+    this.toast.error()
+    this.buyPropertyFormData.reset()
+  }    
+  }
 
 }
   

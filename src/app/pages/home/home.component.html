@@ -1,212 +1,298 @@
 <h1 class="hidden">Blue Earth Properties</h1>
-<nav class="sticky top-0 w-full shadow-md text-white py-[0.45rem]" [ngClass]="{'transparent': !isScrolled , 'colored': isScrolled}">
-    <div class="w-[87%] mx-auto flex space-y-2 justify-between items-center">
-       <img src="assets/logoOne.png" alt="companyLogo" class="logoImg" routerLink="/sell"> 
-        <ul class="hidden md:flex space-x-3">
-            <li class="p-2"><a routerLink="/about">About</a></li>
-            <li class="p-2"><a routerLink="/listings">Listings</a></li>
-            <li class="p-2"><a routerLink="/sell">Sell</a></li>
-            <li class="p-2"><a routerLink="/invest">Invest</a></li>
-            <li class="p-2"><a routerLink="/blog">Blog</a></li>
-        </ul>
+<nav
+  class="sticky top-0 w-full shadow-md text-white py-[0.45rem] z-10"
+  [ngClass]="{ transparent: !isScrolled, colored: isScrolled }"
+>
+  <div class="w-[87%] mx-auto flex space-y-2 justify-between items-center">
+    <img
+      src="assets/logoOne.png"
+      alt="companyLogo"
+      class="logoImg"
+      routerLink="/sell"
+    />
+    <ul class="hidden md:flex space-x-3">
+      <li class="p-2"><a routerLink="/about">About</a></li>
+      <li class="p-2"><a routerLink="/listings">Listings</a></li>
+      <li class="p-2"><a routerLink="/sell">Sell</a></li>
+      <li class="p-2"><a routerLink="/invest">Invest</a></li>
+      <li class="p-2"><a routerLink="/blog">Blog</a></li>
+    </ul>
 
-        <button routerLink="/contact" class="hidden md:block border border-white rounded mt-[0.1rem] hover:bg-white py-2 px-3 transition-all hover:font-medium">
-            Contact Us
-        </button>
+    <button
+      routerLink="/contact"
+      class="hidden md:block border border-white rounded mt-[0.1rem] hover:bg-white py-2 px-3 transition-all hover:font-medium"
+    >
+      Contact Us
+    </button>
 
-        <div class="block md:hidden cursor-pointer">
-            <i class="fa-solid fa-bars text-xl mx-5 cursor-pointer" sidebarjsToggle></i>
-           </div>
+    <div class="block md:hidden cursor-pointer">
+      <i
+        class="fa-solid fa-bars text-xl mx-5 cursor-pointer"
+        sidebarjsToggle
+      ></i>
     </div>
+  </div>
 </nav>
 
-<sidebarjs-element>
-    Hello!
-  </sidebarjs-element>
-  
+<sidebarjs-element> Hello! </sidebarjs-element>
+<div class="swiped">
+  <swiper-container
+    autoplay="true"
+    effect="fade"
+    crossfade="true"
+    speed="2000"
+  >
+    <swiper-slide class="customSwiperSlide">
+      <img src="assets/house.jpeg" class="" alt="houseImg" />
+      <div class="overlay-text">
+        <h1 class="text-7xl">Welcome to Blue Earth Properties</h1>
+        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">
+          Blue Earth Properties is a registered credible and trusted real estate
+          marketing and brokerage firm
+        </p>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="customSwiperSlide">
+      <img src="assets/house1.jpeg" alt="houseOneImg" />
+      <div class="overlay-text">
+        <h3 class="text-7xl mt-20">Sell Your Property Within 60 Days</h3>
+        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">
+          Blue Earth Properties is your one-stop portal for buying and selling
+          real estate, connecting buyers and sellers with seamless and efficient
+          solutions.
+        </p>
+        <div class="flex mt-5 gap-3 items-center buyPropertyBtn">
+          <button routerLink="/listings" class="bg-[#FF6584] hover:bg-[#0072C6] buyPropertyBtn font-semibold py-3 px-3 rounded-lg transition-all">Buy a property</button>
+          <span>or</span>
+          <button routerLink="/sell" class="hover:underline transition-all">Sell a property</button>
+        </div>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="customSwiperSlide">
+      <img src="assets/house2.png" alt="houseTwoImg" />
+      <div class="overlay-text font-extralight">
+        <h3 class="text-7xl">Invest With Blue Earth</h3>
+        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">With investment in Blue Earth Properties, you Get up to 30% to 50% of returns on your investments within a period of 6 - 36 month. With a minimum of a million naira.</p>
+        <button routerLink="/invest" class="bg-[#FF6584] hover:bg-[#0072C6] buyPropertyBtn font-semibold py-3 px-3 rounded-lg mt-3">Invest Today</button>
+    </div>
+    </swiper-slide>
+  </swiper-container>
+</div>
 
-    <swiper-container>
-        <swiper-wrapper>
-            <swiper-slide>
-                <img src="assets/house2.png" alt="" class="imgOne">
-                <div class="overlay text-white">
-                    <div class="relative top-52 left-24">
-                    <h3 class="text-5xl w-[45%]">Sell Properties in less than
-                        60 Days</h3>
-                        <p class="w-[40%] mt-4 mb-4">Blue Earth Properties is your one-stop portal for 
-                            buying and selling real estate, connecting buyers
-                            and sellers with seamless and efficient solutions.</p>
-                            <div class="flex gap-2">
-                                <button class="p-2 px-4 sell bg-[#FF6584] hover:bg-[#0072C6]  rounded shadow-sm">Buy a property</button>
-                                <span>or</span>
-                                <button class="p-2">Sell a property</button>
-                            </div>
-                        </div>
-                        
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <img src="assets/house1.jpeg" alt="" class="imgOne">
-                <div class="overlay"></div>
-            </swiper-slide>
-
-
-            <swiper-slide>
-                <img src="assets/house.jpeg" alt="" class="imgOne">
-                <div class="overlay"></div>
-            </swiper-slide>
-
-        </swiper-wrapper>
-    </swiper-container>
-      
-
-      
-   
 <section class="featured">
-   <h3 class="text-5xl text-center py-4">Featured Properties</h3>
-   <p class="text-center py-4">Get to know some of our favourite homes in Nigeria</p>
-    
+  <h3 class="text-7xl text-center mt-10">Featured Properties</h3>
+  <p class="text-center text-xl mt-6">
+    Get to know some of our favourite homes in Nigeria
+  </p>
+
+  <div class="mt-10">
+    <app-featured></app-featured>
+  </div>
 </section>
 
 <section class="unique container mx-auto">
- <h3 class="text-center mt-9 mb-5">Why Blue Earth Stands Out?</h3>
- <p class="text-center text-xl mt-2 mb-10">Discover why Blue Earth Property is your go-to partner for selling properties.</p>
+  <h3 class="text-center mt-9 mb-5">Why Blue Earth Stands Out?</h3>
+  <p class="text-center text-xl mt-2 mb-10">
+    Discover why Blue Earth Property is your go-to partner for selling
+    properties.
+  </p>
 
-<div class="flex justify-center">
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 ms-32 mt-10 mb-32">
-
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/magnify.png" alt="magnifyWealth" class="mt-4 w-10">
-            <h4 class="mt-3">Magnify Wealth</h4>
-            <p class="w-[90%] mb-6">Our primary mission is to guide our clients towards making sound real estate investments.</p>
-            </div>
+  <div class="flex justify-center">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-20 ms-10 mt-10 mb-32">
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/magnify.png" alt="magnifyWealth" class="mt-4 w-10" />
+          <h4 class="mt-3">Magnify Wealth</h4>
+          <p class="w-[90%] mb-6">
+            Our primary mission is to guide our clients towards making sound
+            real estate investments.
+          </p>
         </div>
+      </div>
 
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/time.png" alt="time" class="mt-4 w-10">
-            <h4 class="mt-3">Swift Sales</h4>
-            <p class="w-[90%] mb-6">We excel at selling properties for our clients in just 60 days or less.</p>
-            </div>
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/time.png" alt="time" class="mt-4 w-10" />
+          <h4 class="mt-3">Swift Sales</h4>
+          <p class="w-[90%] mb-6">
+            We excel at selling properties for our clients in just 60 days or
+            less.
+          </p>
         </div>
+      </div>
 
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/docs.png" alt="documented" class="mt-4 w-10">
-            <h4 class="mt-3">Compliance</h4>
-            <p class="w-[90%] mb-6">We are operate in compliance with the Nigeria Content Act</p>
-            </div>
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/docs.png" alt="documented" class="mt-4 w-10" />
+          <h4 class="mt-3">Compliance</h4>
+          <p class="w-[90%] mb-6">
+            We are operate in compliance with the Nigeria Content Act
+          </p>
         </div>
+      </div>
 
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/agreement.png" alt="agreement" class="mt-4 w-10">
-            <h4 class="mt-3">Wise Investments</h4>
-            <p class="w-[90%] mb-6">Our focus is to help our clients invest their money wisely in real estate.</p>
-            </div>
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/agreement.png" alt="agreement" class="mt-4 w-10" />
+          <h4 class="mt-3">Wise Investments</h4>
+          <p class="w-[90%] mb-6">
+            Our focus is to help our clients invest their money wisely in real
+            estate.
+          </p>
         </div>
+      </div>
 
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/star.png" alt="magnifyWealth" class="mt-4 w-10">
-            <h4 class="mt-3">One Stop Realty</h4>
-            <p class="w-[90%] mb-6">Consider us your all-in-one real estate solution provider.</p>
-            </div>
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/star.png" alt="magnifyWealth" class="mt-4 w-10" />
+          <h4 class="mt-3">One Stop Realty</h4>
+          <p class="w-[90%] mb-6">
+            Consider us your all-in-one real estate solution provider.
+          </p>
         </div>
+      </div>
 
-        <div class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:translate-x-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-[70%]">
-            <div class="px-4 w-full ms-3">
-            <img src="assets/warning.png" alt="magnifyWealth" class="mt-4 w-10">
-            <h4 class="mt-3">Beyond Agents</h4>
-            <p class="w-[90%] mb-6">We are not real estate agents (realtors), we are real estate brokerage firm.</p>
-            </div>
+      <div
+        class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
+      >
+        <div class="px-4 w-full ms-3">
+          <img src="assets/warning.png" alt="magnifyWealth" class="mt-4 w-10" />
+          <h4 class="mt-3">Beyond Agents</h4>
+          <p class="w-[90%] mb-6">
+            We are not real estate agents (realtors), we are real estate
+            brokerage firm.
+          </p>
         </div>
-
+      </div>
     </div>
-
-</div>
-
+  </div>
 </section>
 
-
 <section class="listingSection">
-    
-    <div class="w-[85%] mx-auto">
+  <div class="w-[85%] mx-auto">
     <div class="flex justify-between items-center pt-10">
-        <h3>Listings</h3>
-        <button class="view text-white h-10 px-5 rounded transition-all">View More</button> 
+      <h3>Listings</h3>
+      <button
+        class="view text-white h-10 px-5 rounded transition-all"
+        routerLink="/listings"
+      >
+        View More
+      </button>
     </div>
 
-    <p class="w-[45%] my-2 listingSectionParag"> Explore a wide array of exceptional real estate opportunities in Nigeria,
-        each promising a unique blend of comfort and investment potential.</p>
-    </div>
+    <p class="w-[45%] my-2 listingSectionParag">
+      Explore a wide array of exceptional real estate opportunities in Nigeria,
+      each promising a unique blend of comfort and investment potential.
+    </p>
+  </div>
 
+  <div class="listed">
+    <div class="flex">
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 ms-[6.5rem] mt-10 mb-32"
+      >
+     
+      <div  *ngFor="let list of homeListings">
+      <div  class="card transition-transform transform hover:scale-105 min-w-[290px] max-w-lg" routerLink="{{list.route}}">
 
-    <div class="listed">
-
-        <div class="flex">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 ms-[6.5rem] mt-10 mb-32">
-
-                <div class="card bg-white rounded-sm">
-                    <img src="" alt="propertyOne">
-                    <h5 class="text-lg">3 Bedroom Terrace</h5>
-                    <div class="flex">
-                        <img src="" alt="">
-                        <p>Lagos, Nigeria</p>
-                    </div>
-                    <p class="text-green-500">100,000,000</p>
-                    <p>3 Bedrooms | 2 Toilets | 1Pool </p>
+        <div class="max-w-xs bg-white border-gray-200 rounded-lg shadow-sm">
+            <a routerLink="{{list.route}}">
+                <img class="rounded-t-lg w-full h-52 object-cover" src="{{list.propertyImg}}" alt=""/>
+            </a>
+            <div class="pt-3 ps-5 pb-4 h-full">
+                <a routerLink="{{list.route}}">
+                    <h5 class="text-[1.3rem] ps-1 font-bold tracking-tight text-[#0F2B8E]">{{list.title}}</h5>
+                </a>
+                
+                <div class="flex items-center location">
+                    <span class="material-symbols-outlined text-[#374370] text-xl">
+                        location_on
+                        </span>   
+                     <p class="text-[#3F3D56]">{{list.location | titlecase }}</p>
                 </div>
 
+                <p class="ps-1 font-semibold text-[#3CCF8E]"> <span>&#8358;</span> {{list.price | number}}</p>
+
+                <p class="ps-1 pr-5 font-['poppins'] text-[#0F2B8E]" *ngIf="list.descriptionThree ; else descriptionTwo" > {{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionThree}}</p>
+
+                <ng-template #descriptionTwo>
+                  <p class="ps-1 font-['poppins'] text-[#0F2B8E]">{{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} </p>
+                </ng-template>
             </div>
         </div>
         
-
     </div>
+</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="blogSection">
-    <h3 class="text-center">THE BLUE BLOGS</h3>
-    <p class="text-center mx-auto w-[75%]">Discover a wealth of knowledge in our real estate blog. From market trends to
-        investment strategies, our articles are your compass in navigating Nigeria's 
-       ever-evolving property landscape.</p>
+  <h3 class="text-center pt-8 pb-2">THE BLUE BLOGS</h3>
+  <p class="text-center mt-2 mb-4 mx-auto w-[65%] font-extralight">
+    Discover a wealth of knowledge in our real estate blog. From market trends
+    to investment strategies, our articles are your compass in navigating
+    Nigeria's ever-evolving property landscape.
+  </p>
+
+  <div class="blogDetails pt-6 w-[90%] mx-auto">
     
-    <div class="blogDetails">
+    <!-- first blog item -->
+
+    <div class="flex items-center gap-4 ml-6">
+      <img src="assets/userAvatar.png" class="w-10" alt="avatar ImgOne" />
+      <div>
+        <h4>Title 1</h4>
+      <h6>By : Author One</h6>
+      <p>Description</p>
+    </div>
+    </div>
+
+    <hr class="w-[96%] mx-auto my-3" />
+
+    <div class="flex items-center gap-4 ml-6">
+        <img src="assets/userAvatar.png" class="w-10" alt="avatar ImgOne" />
         <div>
-            <img src="" alt="avatar ImgOne">
-            <h6>By : Author One</h6>
-            <p>Description</p>
-        </div>
+          <h4>Title 1</h4>
+        <h6>By : Author One</h6>
+        <p>Description</p>
+      </div>
+      </div>
 
-        <hr class="w-[96%] mx-auto">
-
-        <div>
-            <img src="" alt="avatar ImgTwo">
-            <p>By : Author Two</p>
-            <p>Description</p>
-        </div>
-
-        <a routerLink="">Read More</a>
-    </div>   
+      <div class="text-right">
+        <button routerLink="/blog" class="py-3 font-['poppins'] font-extralight hover:underline">Read More</button>
+      </div>
+   
+  </div>
 </section>
 
-<hr>
+<hr />
 
 <section class="investSection">
+  <div
+    class="flex justify-between w-[87%] text-white mx-auto pt-7 items-center"
+  >
+    <h3>Invest in Real Estate Through Blue Earth Properties</h3>
 
-        <div class="flex justify-between w-[90%] text-white mx-auto pt-7 items-center">
-
-        <h3>Invest in Real Estate Through Blue Earth Properties </h3>
-        
-        <button class="text-white p-2 bg-[#FF6584] px-8 rounded transition-all shadow-md">More Info</button>
-
-        </div>
-
+    <button
+      class="text-white p-2 bg-[#FF6584] px-8 rounded transition-all shadow-md"
+    >
+      More Info
+    </button>
+  </div>
 </section>
 
-<hr>
+<hr />
 
 <app-footer></app-footer>

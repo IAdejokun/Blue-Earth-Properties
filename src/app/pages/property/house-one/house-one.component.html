@@ -1,71 +1,332 @@
 <app-nav></app-nav>
 
 <section class="w-[95%] mx-auto">
+  <div class="flex justify-center py-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="mx-auto">
+        <!-- <img src="{{}}" alt="{{}}"> -->
 
-    <div class="flex justify-center py-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-
-            <div class="mx-auto">
-                <!-- <img src="{{}}" alt="{{}}"> -->
-                
-                <div *ngIf="selectedImg" class="mt-12 mb-4 w-[29rem] h-[21rem] transition-all">
-                    <img [src]="selectedImg" [alt]="selectedAlt" class="rounded w-full h-full object-cover">
-                </div>
-                
-
-                <div class="flex mr-9">
-                <div *ngFor="let img of imgData" class="mx-2 my-3">
-                    <button class="w-20 h-20 transition-transform transform hover:scale-105">
-                      <img [src]="img.imgSrc" [alt]="img.imgAlt" [class.active]="selectedImg === img.imgSrc" (click)="selectImg(img.imgSrc, img.imgAlt)" class="rounded-lg w-full h-full object-cover transition-opacity opacity-100 hover:opacity-75">
-                    </button>
-                  </div>
-                </div>
-            </div>
-
-            <div class="mt-10 w-[90%] mx-auto">
-                <h3 class="font-['poppins'] text-[#0F2B8E] text-4xl font-semibold">5 Bedroom Detached Duplex with Swimming Pool</h3>
-                <p class="font-['poppins'] my-2"><span class="font-semibold">location:</span> Lagos, Nigeria</p>
-                <p class="font-['poppins'] my-2"><span class="font-semibold"> Price: &#8358;</span> 100,000,000</p>
-                <p class="font-['poppins'] my-2"><span class="font-semibold"> Property Attributes: </span> 9Beds | 18Baths | Single Family Home </p>
-                <p class="font-['poppins'] my-2 font-semibold">Property Description</p>
-                <p class="font-['poppins'] my-2 description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
-                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim 
-                    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia 
-                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque 
-                    porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-                <button class="book rounded my-2 text-white bg-[#0072C6] p-2">Book Tour</button>
-                </div>
+        <div
+          *ngIf="selectedImg"
+          class="mt-12 mb-4 w-[29rem] h-[21rem] transition-all customImg"
+        >
+          <img
+            [src]="selectedImg"
+            [alt]="selectedAlt"
+            class="rounded w-full h-full object-cover"
+          />
         </div>
-    </div>
 
+        <div class="flex mr-9">
+          <div *ngFor="let img of imgData" class="mx-2 my-3">
+            <button
+              class="w-20 h-20 transition-transform transform hover:scale-105"
+            >
+              <img
+                [src]="img.imgSrc"
+                [alt]="img.imgAlt"
+                [class.active]="selectedImg === img.imgSrc"
+                (click)="selectImg(img.imgSrc, img.imgAlt)"
+                class="rounded-lg w-full h-full object-cover transition-opacity opacity-100 hover:opacity-75"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 w-[90%] mx-auto">
+        <h3 class="font-['poppins'] text-[#0F2B8E] text-4xl font-semibold">
+         {{listingTitle}}
+        </h3>
+        <p class="font-['poppins'] my-2">
+          <span class="font-semibold">location:</span> Lagos, Nigeria
+        </p>
+        <p class="font-['poppins'] my-2">
+          <span class="font-semibold"> Price: &#8358;</span> 100,000,000
+        </p>
+        <p class="font-['poppins'] my-2">
+          <span class="font-semibold"> Property Attributes: </span> 9Beds |
+          18Baths | Single Family Home
+        </p>
+        <p class="font-['poppins'] my-2 font-semibold">Property Description</p>
+        <p class="font-['poppins'] my-2 description">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur
+        </p>
+        <button
+          class="book rounded my-2 text-white bg-[#0072C6] p-2"
+          (click)="toggleModal()"
+        >
+          Book Tour
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="w-[85%] border my-5 border-[#0073c644] h-[0.01rem] mx-auto">
-
-</div>
+<div class="w-[85%] border my-5 border-[#0073c644] h-[0.01rem] mx-auto"></div>
 <div class="w-[87%] mx-auto">
-<p class="font-['poppins'] mb-8 font-semibold ms-2 text-4xl media">Media</p>
+  <p class="font-['poppins'] mb-8 font-semibold ms-2 text-4xl media">Media</p>
 
-<div class="flex justify-center lg:justify-start mb-20">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    
-    <div *ngFor="let media of moreMedia" class="mx-1 my-3">
-      
+  <div class="flex justify-center lg:justify-start mb-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div *ngFor="let media of moreMedia" class="mx-1 my-3">
         <!-- Use ngIf to conditionally render img or video based on the media type -->
         <ng-container *ngIf="media.type === 'image'; else videoTemplate">
-          <img [src]="media.src" [alt]="media.alt" class="rounded-lg w-[20rem] h-80 transition-transform transform hover:scale-105 ">
+          <img
+            [src]="media.src"
+            [alt]="media.alt"
+            class="rounded-lg w-[20rem] h-80 transition-transform transform hover:scale-105"
+          />
         </ng-container>
         <ng-template #videoTemplate>
-
-          <video [src]="media.src" controls="controls" class="rounded-lg  w-[20rem] h-80 object-cover transition-transform transform hover:scale-105"></video>
-        
+          <video
+            [src]="media.src"
+            controls="controls"
+            class="rounded-lg w-[20rem] h-80 object-cover transition-transform transform hover:scale-105"
+          ></video>
         </ng-template>
-    
-    
-</div>
+      </div>
+    </div>
   </div>
 </div>
- 
-</div>
 <app-footer></app-footer>
+
+<!-- modal -->
+<div
+  *ngIf="showModal"
+  class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
+>
+  <div class="relative w-auto my-6 mx-auto max-w-6xl">
+    <!--content-->
+    <div
+      class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
+    >
+      <!--header-->
+      <div
+        class="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t"
+      >
+        <h3 class="text-3xl font-['poppins'] text-[#0F2B8E] font-semibold">
+          Book A Tour
+        </h3>
+        <button
+          class="p-1 ml-auto float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+          (click)="toggleModal()"
+        >
+          <span class="text-red-700 material-symbols-outlined"> close </span>
+        </button>
+      </div>
+      <!--body-->
+      <div class="relative p-6 flex-auto">
+        <p class="text-2xl font-light font-['poppins']">
+          {{listingTitle}}
+        </p>
+        <p class="text-sm italic font-light font-['poppins'] my-3">
+          <span class="text-red-500">*</span> All Fields are Required
+        </p>
+        <form [formGroup]="buyPropertyFormData" (ngSubmit)="buyPropertyFormDataSubmit()">
+          <div class="mb-2">
+            <label
+              for="firstName"
+              class="block mb-2 font-['poppins'] text-[#3F3D56]"
+              >First Name</label
+            >
+            <input
+              type="text"
+              class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-blue-300 focus:shadow-outline"
+              placeholder="Firstname"
+              id="firstName"
+              name="firstName"
+              formControlName="firstName"
+              required
+            />
+
+            <div
+              *ngIf="
+                buyPropertyFormData.get('firstName')?.invalid &&
+                buyPropertyFormData.get('firstName')?.touched
+              "
+            >
+              <div class="mt-1 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                First Name is required!
+              </div>
+            </div>
+            <div
+              *ngIf="
+            buyPropertyFormData.get('firstName')?.errors?.['minlength']
+        "
+            >
+              <div class="mt-1 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                First Name is too short (Minimum Length of 3 Characters).
+              </div>
+            </div>
+
+            <div *ngIf="buyPropertyFormData.get('firstName')?.valid">
+              <div class="mt-1 text-green-600 text-sm">
+                <!-- Add your validation message here -->
+                ✅ Look's Good.
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mb-2">
+            <label
+              for="lastName"
+              class="block mb-2 font-['poppins'] text-[#3F3D56]"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-blue-300 focus:shadow-outline"
+              placeholder="Doe"
+              id="lastName"
+              name="lastName"
+              formControlName="lastName"
+              required
+            />
+
+            <div
+              *ngIf="
+                buyPropertyFormData.get('lastName')?.invalid &&
+                buyPropertyFormData.get('lastName')?.touched
+              "
+            >
+              <div class="mt-1 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                Last Name is required!
+              </div>
+            </div>
+            <div
+              *ngIf="
+            buyPropertyFormData.get('lastName')?.errors?.['minlength']
+        "
+            >
+              <div class="mt-1 text-red-600 text-sm">
+                <!-- Add your validation message here -->
+                Last Name is too short (Minimum Length of 3 Characters).
+              </div>
+            </div>
+
+            <div *ngIf="buyPropertyFormData.get('lastName')?.valid">
+              <div class="mt-1 text-green-600 text-sm">
+                <!-- Add your validation message here -->
+                ✅ Look's Good.
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="mb-2">
+            <label
+              for="email"
+              class="block mb-2 font-['poppins'] text-[#3F3D56]"
+              >Email</label
+            >
+            <input
+              type="email"
+              class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-blue-300 focus:shadow-outline"
+              placeholder="JohnDoe@mail.com"
+              id="email"
+              name="email"
+              formControlName="email"
+              required
+            />
+
+            <div
+            *ngIf="
+              buyPropertyFormData.get('email')?.invalid &&
+              buyPropertyFormData.get('email')?.touched
+            "
+          >
+            <div class="mt-1 text-red-600 text-sm">
+              <!-- Add your validation message here -->
+              Email is required!
+            </div>
+          </div>
+
+          <div *ngIf="buyPropertyFormData.get('email')?.valid">
+            <div class="mt-1 text-green-600 text-sm">
+              <!-- Add your validation message here -->
+              ✅ Look's Good.
+            </div>
+          </div>
+
+          </div>
+
+          <div>
+            <label
+              for="telephoneNumber"
+              class="block mb-2 font-['poppins'] text-[#3F3D56]"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              class="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-blue-300 focus:shadow-outline"
+              placeholder="080123456789"
+              name="telephoneNumber"
+              formControlName="phoneNumber"
+              id="telephoneNumber"
+              required
+            />
+
+            <div
+            *ngIf="
+              buyPropertyFormData.get('phoneNumber')?.invalid &&
+              buyPropertyFormData.get('phoneNumber')?.touched
+            "
+          >
+            <div class="mt-1 text-red-600 text-sm">
+              <!-- Add your validation message here -->
+              Phone Number is required!
+            </div>
+          </div>
+
+          <div *ngIf="buyPropertyFormData.get('phoneNumber')?.valid">
+            <div class="mt-1 text-green-600 text-sm">
+              <!-- Add your validation message here -->
+              ✅ Look's Good.
+            </div>
+          </div>
+
+          </div>
+        
+      
+      <!--footer-->
+      <div
+        class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b"
+      >
+        <button
+          class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button"
+          (click)="toggleModal()"
+        >
+          Close
+        </button>
+        <button
+          [disabled]="!buyPropertyFormData.valid"
+          class="bg-[#0072C6] text-white font-bold capitalize font-['poppins'] text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="submit"
+          value="submit"
+          [class.bg-#0072C6]="buyPropertyFormData.valid"
+          [class.bg-gray-400]="!buyPropertyFormData.valid"
+        >
+          Book Tour
+        </button>
+      </div>
+    </form>
+  </div>
+
+
+    </div>
+  </div>
+</div>
+<div *ngIf="showModal" class="opacity-25 fixed inset-0 z-40 bg-black"></div>

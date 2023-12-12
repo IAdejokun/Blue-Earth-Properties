@@ -54,61 +54,111 @@ a:hover::before {
     background-color: #0072C6;
 }
 
-swiper-container {
-    width: 100%;
-    height: 92vh;
+.swiped{
+    height: 90vh;
+}
+
+.buyPropertyBtn{
+    font-family: var(--jak);
+}
+
+swiper-container{
+    height: 100vh;
+    position: relative;
+   top: -100px;
+}
+
+/* swiper-slide{
+    position: relative;
+} */
+
+/* swiper-slide::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-  }
-  
-swiper-slide {
-    position: relative;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  } */
+
+  .customSwiperSlide::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
   }
 
- swiper-wrapper{
-    width: 100% ;
- } 
-  
-swiper-slide h3{
-    font-weight: 700;
-    font-family: 'avenir',sans-serif;
-} 
-
-swiper-slide p{
-    font-family: var(--poppins);
-    font-weight: 300;
+.overlay-text{
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-32%, -50%);
+    text-align: left;
+    color: white;
+    width: 100%; /* Ensures the text takes the full width of the slide */
+    padding: 20px; /* Add padding to the text as needed */
+    box-sizing: border-box; /* Include padding in the width */
+    z-index: 1; 
 }
+ 
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.imgOne{
-    width: 2500px;
+swiper-slide img{
+    width: 1400px;
     height: 100%;
     object-fit: cover;
 }
   
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.32) ; /* Adjust the color and opacity as needed */
-  }
+
+swiper-slide div h1{
+    font-family: 'avenir',sans-serif;
+    font-weight: 700;
+    width: 70%;
+}
+
+swiper-slide div h3{
+    font-family: 'avenir',sans-serif;
+    font-weight: 700;
+    width: 70%;
+}
+
+ .customParagraph{
+    font-weight: 400 !important;
+ }
 
   .sell{
     cursor: pointer !important;
   }
-xx
+
   .sell:hover{
     background-color: #0072C6 !important;
   }
-
+/* 
 .featured{
-    margin-top: 550px;
     background-color: var(--whiteAlt);
+
+} */
+
+
+.customContainer{
+    height: 40vh !important;
+    width: 40vw !important;
+    background: white;
 }
+
+.customSlide{
+    background: white;
+}
+
+
 
 .featured h3{
     color: var(--headingColor);
@@ -126,6 +176,19 @@ xx
 
 section{
     color: var(--txtColor);
+}
+
+.location p{
+    font-family: var(--jak);
+
+} 
+
+.circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(15, 43, 142);
+    border-radius: 50%;
 }
 
 .unique{
@@ -172,7 +235,7 @@ section{
 }
 
 .view:hover{
-    background-color: #3F3D56;
+    background-color: #289416;
 }
 
 .listingSectionParag{
@@ -192,9 +255,24 @@ section{
 }
 
 .blogSection > p{
-    font-weight: 300;
-    font-size: 14px;
+    font-size: 17px;
     font-family: var(--poppins);
+}
+
+.blogDetails h4{
+    font-family: var(--inter);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.blogDetails h6{
+    font-family: var(--poppins);
+    font-size: 16px;
+}
+
+.blogDetails p{
+    font-family: var(--poppins);
+    font-size: 16px;
 }
 
 .investSection{

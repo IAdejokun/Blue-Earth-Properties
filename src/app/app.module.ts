@@ -13,7 +13,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { TeamComponent } from './pages/about/team/team.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {register} from 'swiper/element/bundle';
 import { WhoWeAreComponent } from './pages/about/who-we-are/who-we-are.component';
 import { VisionMissionComponent } from './pages/about/vision-mission/vision-mission.component';
 import { MeetBrokerComponent } from './pages/about/meet-broker/meet-broker.component';
@@ -25,10 +24,13 @@ import { ListingsComponent } from './pages/listings/listings.component';
 import { HouseOneComponent } from './pages/property/house-one/house-one.component';
 import { SamplePostComponent } from './pages/blogPost/sample-post/sample-post.component';
 import {HttpClientModule} from '@angular/common/http';
-import {SidebarjsModule} from 'ng-sidebarjs'
+import {SidebarjsModule} from 'ng-sidebarjs';
+import { ModalComponent } from './components/modal/modal.component'
+import { register } from 'swiper/element/bundle';
+import { FeaturedComponent } from './components/featured/featured.component';
+// register Swiper custom elements
+register();
 
-
-register()
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,11 @@ register()
     ListingsComponent,
     HouseOneComponent,
     SamplePostComponent,
+    ModalComponent,
+    FeaturedComponent,
+  
+    
+    
    
   ],
   imports: [
@@ -58,7 +65,7 @@ register()
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule,
-    SidebarjsModule.forRoot()
+    SidebarjsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -15,6 +15,7 @@ import {BlogComponent} from './pages/blog/blog.component'
 import { ListingsComponent } from './pages/listings/listings.component';
 import { HouseOneComponent } from './pages/property/house-one/house-one.component';
 import { SamplePostComponent } from './pages/blogPost/sample-post/sample-post.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -82,6 +83,10 @@ const routes: Routes = [
   {
     path:'blog/post',
     component:SamplePostComponent
+  },
+  {
+    path:'modal',
+    component:ModalComponent
   },
   {
     path:'**',

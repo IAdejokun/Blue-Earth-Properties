@@ -17,3 +17,13 @@ p{
 .media{
     color: #0F2B8E ;
 }
+
+
+@media screen and (max-width : 600px) {
+
+    .customImg{
+     width: 20rem;
+     height: 21rem;
+    }
+
+  } 

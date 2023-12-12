@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SellComponent {
 
+//Modal Selection
+showModal = false;
+  
+toggleModal(){
+  this.showModal = !this.showModal;
+}
+
 }

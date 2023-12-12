@@ -49,12 +49,13 @@
                 <p class="ps-1 font-semibold text-[#3CCF8E]"> <span>&#8358;</span> {{list.price | number}}</p>
 
                 <p class="ps-1 pr-5 font-['poppins'] text-[#0F2B8E]" *ngIf="list.descriptionThree ; else descriptionTwo" > {{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionThree}}</p>
-                
+
                 <ng-template #descriptionTwo>
                   <p class="ps-1 font-['poppins'] text-[#0F2B8E]">{{list.descriptionOne}} <span class="circle mx-1 mb-[0.1rem]"></span> {{list.descriptionTwo}} </p>
                 </ng-template>
             </div>
         </div>
+        
     </div>
     </div>
 
