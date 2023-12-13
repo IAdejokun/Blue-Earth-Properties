@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import {PropertyModel} from 'src/app/property-model'
+import {PropertyModel} from 'src/app/property-model';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,13 @@ export class HomeComponent {
 
   isScrolled = false;
 
+  ngOnInit():void{
+    AOS.init()
+  }
+
   @HostListener('window:scroll', [])
+
+  
 
   onScroll(): void{
     this.isScrolled = window.scrollY > 50

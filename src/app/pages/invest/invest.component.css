@@ -55,3 +55,29 @@ div > button{
     font-family: var(--poppins);
     font-weight: 400;
 }
+
+@media screen and (max-width : 1185px) and (min-width : 1023px) {
+    .customGrid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+   
+      
+  }
+
+
+@media screen and (max-width : 1023px) {
+    .investHead{
+        font-size: 35px;
+       }
+   
+      
+  }
+
+  @media screen and (max-width : 450px) {
+    .investHead{
+     font-size: 40px;
+     line-height: 50px;
+    }
+
+   
+  } 

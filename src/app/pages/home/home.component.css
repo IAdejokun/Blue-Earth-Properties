@@ -196,7 +196,6 @@ section{
 }
 
 .unique h3{
-    font-size: 48px;
     font-weight: 700;
     font-family: 'avenir', sans-serif;
     color: var(--headingColor);
@@ -249,13 +248,12 @@ section{
 }
 
 .blogSection h3{
-    font-size: 48px;
+    
     font-family: 'avenir',sans-serif;
     font-weight: 700;
 }
 
 .blogSection > p{
-    font-size: 17px;
     font-family: var(--poppins);
 }
 
@@ -281,7 +279,7 @@ section{
 }
 
 .investSection h3{
-    font-size:24px;
+   
     font-family: var(--poppins);
     font-weight: 300;
 }

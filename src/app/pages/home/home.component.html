@@ -8,7 +8,7 @@
       src="assets/logoOne.png"
       alt="companyLogo"
       class="logoImg"
-      routerLink="/sell"
+      routerLink=""
     />
     <ul class="hidden md:flex space-x-3">
       <li class="p-2"><a routerLink="/about">About</a></li>
@@ -34,7 +34,39 @@
   </div>
 </nav>
 
-<sidebarjs-element> Hello! </sidebarjs-element>
+<sidebarjs-element>
+<div class="mt-10 ms-9 mb-5" routerLink="">
+    <img src="assets/logo.png" class="w-32" alt="companyLogo">
+</div>    
+<button routerLink="" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+   <span class="ms-9 text-xl font-['poppins']"> Home</span>
+</button>
+
+<button routerLink="/about" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']">About</span>
+ </button>
+
+ <button routerLink="/listings" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']"> Listings</span>
+ </button>
+
+ <button routerLink="/sell" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']">Sell</span>
+ </button>
+
+<button routerLink="/invest" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']">Invest</span>
+ </button>
+
+ <button routerLink="/blog" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']">Blog</span>
+ </button>
+
+ <button routerLink="/contact" class="hover:bg-[#0072C6] hover:text-white text-[#0072C6] text-left py-5 transition-all">
+    <span class="ms-9 text-xl font-['poppins']">Contact Us</span>
+ </button>
+
+</sidebarjs-element>
 <div class="swiped">
   <swiper-container
     autoplay="true"
@@ -45,8 +77,10 @@
     <swiper-slide class="customSwiperSlide">
       <img src="assets/house.jpeg" class="" alt="houseImg" />
       <div class="overlay-text">
-        <h1 class="text-7xl">Welcome to Blue Earth Properties</h1>
-        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">
+        <h1 class="text-3xl md:text-7xl" data-aos="fade-up" data-aos-duration="3000">Welcome to Blue Earth Properties</h1>
+        <p class="font-['poppins'] text-base md:text-xl w-[90%] md:w-[55%] mt-5 font-extralight" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           Blue Earth Properties is a registered credible and trusted real estate
           marketing and brokerage firm
         </p>
@@ -55,8 +89,8 @@
     <swiper-slide class="customSwiperSlide">
       <img src="assets/house1.jpeg" alt="houseOneImg" />
       <div class="overlay-text">
-        <h3 class="text-7xl mt-20">Sell Your Property Within 60 Days</h3>
-        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">
+        <h3 class="text-3xl md:text-7xl mt-20">Sell Your Property Within 60 Days</h3>
+        <p class="font-['poppins'] text-base md:text-xl  w-[90%] md:w-[55%] mt-5 font-extralight">
           Blue Earth Properties is your one-stop portal for buying and selling
           real estate, connecting buyers and sellers with seamless and efficient
           solutions.
@@ -71,8 +105,8 @@
     <swiper-slide class="customSwiperSlide">
       <img src="assets/house2.png" alt="houseTwoImg" />
       <div class="overlay-text font-extralight">
-        <h3 class="text-7xl">Invest With Blue Earth</h3>
-        <p class="font-['poppins'] text-xl w-[55%] mt-5 font-extralight">With investment in Blue Earth Properties, you Get up to 30% to 50% of returns on your investments within a period of 6 - 36 month. With a minimum of a million naira.</p>
+        <h3 class="text-3xl md:text-7xl">Invest With Blue Earth</h3>
+        <p class="font-['poppins'] text-base md:text-xl  w-[90%] md:w-[55%] mt-5 font-extralight">With investment in Blue Earth Properties, you Get up to 30% to 50% of returns on your investments within a period of 6 - 36 month. With a minimum of a million naira.</p>
         <button routerLink="/invest" class="bg-[#FF6584] hover:bg-[#0072C6] buyPropertyBtn font-semibold py-3 px-3 rounded-lg mt-3">Invest Today</button>
     </div>
     </swiper-slide>
@@ -80,25 +114,26 @@
 </div>
 
 <section class="featured">
-  <h3 class="text-7xl text-center mt-10">Featured Properties</h3>
-  <p class="text-center text-xl mt-6">
+  <h3 class="text-4xl md:text-7xl text-center mt-10 " data-aos="fade-up"data-aos-duration="1500">Featured Properties</h3>
+  <p class="text-center text-base md:text-xl mt-6" data-aos="fade-up" data-aos-duration="2000">
     Get to know some of our favourite homes in Nigeria
   </p>
 
-  <div class="mt-10">
+  <div class="mt-10" data-aos="fade-up">
     <app-featured></app-featured>
   </div>
 </section>
 
 <section class="unique container mx-auto">
-  <h3 class="text-center mt-9 mb-5">Why Blue Earth Stands Out?</h3>
-  <p class="text-center text-xl mt-2 mb-10">
+  <h3 class="text-center mt-9 text-3xl md:text-5xl mb-5" data-aos="fade-up">Why Blue Earth Stands Out?</h3>
+  <p class="text-center text-base md:text-xl mt-2 mb-10" data-aos="fade-up">
     Discover why Blue Earth Property is your go-to partner for selling
     properties.
   </p>
 
   <div class="flex justify-center">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-20 ms-10 mt-10 mb-32">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-20 sm:ms-10 mt-10 mb-32" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" data-aos-duration="2500">
       <div
         class="card hover:bg-[#0072C6] hover:text-white transition-all hover:translate-y-2 hover:shadow-lg border-[#FFFEFE] text-[#3F3D56] rounded w-64 h-52"
       >
@@ -180,30 +215,30 @@
 
 <section class="listingSection">
   <div class="w-[85%] mx-auto">
-    <div class="flex justify-between items-center pt-10">
-      <h3>Listings</h3>
+    <div class="flex justify-center sm:justify-between  items-center pt-10">
+        <h3>Listings</h3>
       <button
-        class="view text-white h-10 px-5 rounded transition-all"
+        class="view hidden sm:block text-white h-10 px-5 rounded transition-all"
         routerLink="/listings"
       >
         View More
       </button>
     </div>
 
-    <p class="w-[45%] my-2 listingSectionParag">
+    <p class="ms-4 sm:ms-0  w-[90%] text-center sm:text-left  md:w-[45%] my-2 listingSectionParag">
       Explore a wide array of exceptional real estate opportunities in Nigeria,
       each promising a unique blend of comfort and investment potential.
     </p>
   </div>
 
-  <div class="listed">
-    <div class="flex">
+  <div class="listed" data-aos="fade-right">
+    <div class="flex justify-center lg:justify-start">
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 ms-[6.5rem] mt-10 mb-32"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-16 lg:ms-[6.0rem] mt-10 mb-32"
       >
      
       <div  *ngFor="let list of homeListings">
-      <div  class="card transition-transform transform hover:scale-105 min-w-[290px] max-w-lg" routerLink="{{list.route}}">
+      <div  class="card transition-transform transform hover:scale-105 min-w-[270px] max-w-lg" routerLink="{{list.route}}">
 
         <div class="max-w-xs bg-white border-gray-200 rounded-lg shadow-sm">
             <a routerLink="{{list.route}}">
@@ -239,8 +274,8 @@
 </section>
 
 <section class="blogSection">
-  <h3 class="text-center pt-8 pb-2">THE BLUE BLOGS</h3>
-  <p class="text-center mt-2 mb-4 mx-auto w-[65%] font-extralight">
+  <h3 class="text-center pt-12 pb-2 text-3xl md:text-5xl">THE BLUE BLOGS</h3>
+  <p class="text-center mt-2 mb-4 mx-auto w-full text-base sm:text-[17px]  sm:w-[65%] font-extralight">
     Discover a wealth of knowledge in our real estate blog. From market trends
     to investment strategies, our articles are your compass in navigating
     Nigeria's ever-evolving property landscape.
@@ -281,14 +316,14 @@
 
 <section class="investSection">
   <div
-    class="flex justify-between w-[87%] text-white mx-auto pt-7 items-center"
+    class="flex justify-between w-[87%] text-white mx-auto pt-9 sm:pt-7 items-center"
   >
-    <h3>Invest in Real Estate Through Blue Earth Properties</h3>
+    <h3 class="text-sm sm:text-[24px]">Invest in Real Estate Through Blue Earth Properties</h3>
 
     <button
       class="text-white p-2 bg-[#FF6584] px-8 rounded transition-all shadow-md"
     >
-      More Info
+      Invest
     </button>
   </div>
 </section>

@@ -3,13 +3,14 @@ h3,p{
 }
 
 div > h3 {
-    color: var(--primaryColor);
+    color: var(--headingColor);
+    font-family: 'avenir',sans-serif;
 }
 
 h3{
-    font-size: 44px;
+    font-size: 35px;
     font-family: var(--inter);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 div > button{
@@ -29,7 +30,7 @@ div > button{
 
 .cardNumber{
     font-weight: 500;
-    font-size: 128px;
+    font-size: 90px;
     font-family: var(--poppins);
     color: var(--txtColor);         /* Set text color to black */
     background-color: white; /* Set background color to white */      /* Add padding for better visibility */
@@ -49,7 +50,7 @@ div > button{
     font-family: var(--inter);
     font-weight: 400;
     font-size: 21px;
-    width: 70%;
+   
 }
 
 section div>h4{
@@ -74,7 +75,7 @@ section div>h4{
 .cardTitle{
     font-weight: 600;
     font-family: var(--poppins);
-    font-size: 23px;
+    font-size: 19px;
 }
 
 .sellHead{
@@ -86,3 +87,19 @@ section div>h4{
 .modalHeader{
     font-family: var(--poppins);
 }
+
+@media screen and (max-width : 1023px) {
+    .sellHead{
+        font-size: 35px;
+       }
+   
+      
+  }
+
+  @media screen and (max-width : 450px) {
+    .sellHead{
+     font-size: 26px;
+    }
+
+   
+  } 
