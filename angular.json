@@ -16,6 +16,9 @@
             "outputPath": "dist/blue-earth-properties",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "aos"
+            ],
             "polyfills": [
               "zone.js"
             ],

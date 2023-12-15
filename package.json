@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
     "@emailjs/browser": "^3.11.0",
+    "@ngx-loading-bar/core": "^6.0.2",
+    "@ngx-loading-bar/router": "^6.0.2",
     "@types/aos": "^3.0.7",
     "aos": "^3.0.0-beta.6",
     "ng-sidebarjs": "^14.0.0",
