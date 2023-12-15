@@ -16,6 +16,8 @@ import { ListingsComponent } from './pages/listings/listings.component';
 import { HouseOneComponent } from './pages/property/house-one/house-one.component';
 import { SamplePostComponent } from './pages/blogPost/sample-post/sample-post.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { FrequentlyAskedQuestionsComponent } from './pages/frequently-asked-questions/frequently-asked-questions.component';
+import { MagazineComponent } from './pages/magazine/magazine.component';
 
 
 
@@ -67,6 +69,14 @@ const routes: Routes = [
   {
     path:'invest',
     component:InvestComponent
+  },
+  {
+    path:'faq',
+    component:FrequentlyAskedQuestionsComponent
+  },
+  {
+    path:'magazine',
+    component:MagazineComponent
   },
   {
     path:'blog',

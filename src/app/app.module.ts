@@ -28,6 +28,12 @@ import {SidebarjsModule} from 'ng-sidebarjs';
 import { ModalComponent } from './components/modal/modal.component'
 import { register } from 'swiper/element/bundle';
 import { FeaturedComponent } from './components/featured/featured.component';
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
+import { FrequentlyAskedQuestionsComponent } from './pages/frequently-asked-questions/frequently-asked-questions.component';
+import { MagazineComponent } from './pages/magazine/magazine.component';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router'
+import {LoadingBarModule} from '@ngx-loading-bar/core'
+
 // register Swiper custom elements
 register();
 
@@ -53,10 +59,10 @@ register();
     SamplePostComponent,
     ModalComponent,
     FeaturedComponent,
-  
-    
-    
-   
+    ComingSoonComponent,
+    FrequentlyAskedQuestionsComponent,
+    MagazineComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -66,6 +72,8 @@ register();
     ReactiveFormsModule,
     HttpClientModule,
     SidebarjsModule.forRoot(),
+    LoadingBarRouterModule,
+    LoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
